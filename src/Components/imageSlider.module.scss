@@ -1,0 +1,51 @@
+.image {
+  height: 500px;
+}
+
+.carousel_container {
+  position: relative;
+  width: 100%;
+  //   overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease; /* Add transition for smooth sliding */
+}
+
+.carousel_slide {
+  flex: 0 0 auto;
+}
+
+.carousel_image {
+  width: 100%;
+  height: 600px;
+}
+
+.prev_button,
+.next_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.prev_button {
+  left: 0;
+}
+
+.next_button {
+  right: 0;
+}
+
+/* Hide the arrow buttons on smaller screens */
+@media screen and (max-width: 768px) {
+  .prev_button,
+  .next_button {
+    display: none;
+  }
+}

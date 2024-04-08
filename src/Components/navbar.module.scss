@@ -1,0 +1,139 @@
+@use "../styles/mixin.scss" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+
+.dummyText {
+  @include flex(column, unset, unset, 0.5rem);
+  color: red;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+.nav_link {
+  text-decoration: none;
+  color: white;
+}
+.mynavbar {
+  height: 90px;
+  line-height: 12vh;
+  box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: orangered;
+  color: white;
+  margin-bottom: 0px;
+}
+
+/* .childnav{
+  width:95%;
+  margin:auto;
+} */
+
+.logo {
+  margin-left: 2%;
+  height: 50px;
+  border-radius: 50%;
+}
+.mynav_link {
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+  margin: auto;
+  align-items: center;
+}
+
+.mynav_link li {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.cart {
+  position: absolute;
+  top: 20px;
+  /* right: 20px; */
+  color: white;
+  font-size: 35px;
+  /* background-color:red; */
+}
+
+.mynav_link Link {
+  text-decoration: transparent;
+}
+
+button {
+  border: none;
+  background-color: none;
+  font-size: 20px;
+  background-color: transparent;
+}
+.mobile_menu_icon {
+  display: none;
+}
+.login {
+  font-size: 16px;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .mynavbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mynav-link {
+    display: none;
+  }
+  .nav_link_mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    background-color: orangered;
+    /* background: linear-gradient(to right, #4299e0, #4caf50); */
+    font-size: 22px;
+    z-index: 1;
+  }
+  ul li {
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+  }
+  .mobile_menu_icon {
+    position: absolute;
+    display: block;
+    right: 20px;
+    z-index: 2;
+  }
+  .login {
+    font-size: 22px;
+    background-color: transparent;
+  }
+}
+@media (max-width: 620px) {
+  .mainBoxFilter {
+    z-index: 10;
+  }
+  .BlogListingPage {
+    width: 100%;
+  }
+}

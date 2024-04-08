@@ -1,0 +1,49 @@
+.container{
+    width: 90%;
+    margin:auto;
+    padding: 40px 0;
+    /* border: 1px solid orangered; */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: gray;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.imgclass{
+    height: 100%;
+    width:230px;
+    object-fit: cover;
+}
+
+.childcon{
+    display: flex;
+    padding: 48px;
+    align-items: center;
+}
+
+.btn{
+    background-color:orangered;
+    color: white;
+    font-size:25px;
+    padding: 3px 15px 3px 15px;
+    border: none;
+}
+
+@media screen and (max-width:600px) {
+    .flex > div{
+        
+        display: block;
+    }
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
